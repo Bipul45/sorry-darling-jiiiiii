@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorry My Love</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #ffe6f0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .popup-box {
+      background: #fff0f5;
+      border-radius: 20px;
+      padding: 30px 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      max-width: 90%;
+      text-align: center;
+    }
+
+    .popup-box h2 {
+      color: #d63384;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .popup-buttons button {
+      background: #d63384;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #letterBox {
+      display: none;
+      padding: 30px 15px;
+      text-align: center;
+    }
+
+    #letterBox h1 {
+      color: #d63384;
+      font-size: 32px;
+    }
+
+    #letterBox p {
+      font-size: 18px;
+      white-space: pre-wrap;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .final-message {
+      font-size: 22px;
+      margin-top: 30px;
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    #rejectedMsg {
+      display: none;
+      text-align: center;
+      padding: 30px;
+      font-size: 20px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Full Screen Popup -->
+  <div id="popup">
+    <div class="popup-box">
+      <h2>Apne Baandru ko maaf kar do ❤️</h2>
+      <div class="popup-buttons">
+        <button onclick="acceptSorry()">Haan, maaf kiya 😊</button>
+        <button onclick="rejectSorry()">Nahi, abhi nahi 😢</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sorry Letter -->
+  <div id="letterBox">
+    <h1>I'm Sorry 💔</h1>
+    <p>
+Pehle toh dil se THANK YOU 💗💗 ki tumne mujhe maaf kar diya...
+
+Yrr dil se sorry ki tum mujhse gussa ho, aur thik lag raha hai mujhe...
+
+Raat mein main so gaya isliye tum gussa ho, is baat ke liye main dil se sorry bol raha hoon.  
+Plss maaf kar do mujhe...
+
+Lekin sach bataun toh kal main bohot thak gaya tha...  
+Kal maine Maths ke 5 lectures liye aur ek IOC ka bhi,  
+Aur sabka notes bhi likha, isliye body bilkul thak gayi thi.
+
+Plss meri jaan, maaf kar dena... Aage se dhyaan rakhunga. 🙏💔
+
+Baaki kuch bhi ho...  
+Tumse mera pyaar **kabhi kam nahi hoga**, chahe kuch bhi ho jaye.  
+Iske liye main dil se PROMISE karta hoon!
+
+**I LOVE YOUUUUUUU MERE JAAN 😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘  
+😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘**
+
+Tum meri zindagi ki sabse khoobsurat hissa ho...  
+💗🫶🤩🥰🥰🤗🤗
+    </p>
+
+    <div class="final-message">Apne pyaare Baandru ko maaf kar do 💌</div>
+  </div>
+
+  <!-- Rejection Message -->
+  <div id="rejectedMsg">Baandru intezaar karega... 🥺</div>
+
+  <!-- Song (replace src with your own mp3 link) -->
+  <audio id="bgMusic" src="YOUR_SONG_URL_HERE.mp3" loop></audio>
+
+  <script>
+    function acceptSorry() {
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('letterBox').style.display = 'block';
+      document.getElementById('bgMusic').play();
+    }
+
+    function rejectSorry() {
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('rejectedMsg').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
